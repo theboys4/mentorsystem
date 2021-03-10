@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'g_m6px1nuy=l&oa=etv4s%rv6t538^hfdm9alkr+%3r@%eff50'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["studentmentorsystem.herokuapp.com","127.0.0.1"]
+
 
 
 # Application definition
