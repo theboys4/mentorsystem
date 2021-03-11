@@ -1,0 +1,163 @@
+{% load static %}
+<html><head>
+	<title>student details</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+
+	
+	
+ <style type="text/css">
+   .sam{
+    
+    background-color: white;
+    width:90%; 
+    height:100%;
+    border-radius:25px; 
+    padding:100px; 
+    margin:75px;
+    align-content: center;
+   }
+   .dam{
+    
+    background-color:#ac53c7;
+   
+   }
+   .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+ textarea {
+  background-color:#c3bacf;
+  border:2px solid black;
+  border-radius:15px;
+  text-align: center; 
+
+
+ }
+ </style>
+
+
+
+  
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+		<div class="dam"><center><h1>STUDENT DETAILS</h1></center>
+	
+<div class="sam">
+<div>
+<h3>BIO DATA</h3><br>
+</div>
+
+             
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th></th>
+        <th>{{pk2.name}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ROLL NO</td>
+        <td></td>
+        <td>{{pk2.roll}}</td>
+      </tr>
+      <tr>
+        <td>DOB</td>
+        <td></td>
+        <td>{{pk2.dob}}</td>
+      </tr>
+      <tr>
+        <td>REG</td>
+        <td></td>
+        <td>{{pk2.reg}}</td>
+      </tr>
+<tr>
+        <td>FATHER NAME</td>
+        <td></td>
+        <td>{{pk2.fname}}</td>
+      </tr><tr>
+        <td>PHONE NO</td>
+        <td></td>
+        <td>{{pk2.phno}}</td>
+      </tr>
+<tr>
+        <td>EMAIL ID</td>
+        <td></td>
+        <td>{{pk2.eid}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  
+
+  <div class="sam">
+
+
+<h2>ACHIEVEMENT</h2>
+<form action = "/ach/{{pk2.id}}/" method="POST">{% csrf_token %}
+<textarea rows="8" cols="100" name ="ach" >
+{{pk2.ach}}
+
+</textarea><br>
+
+            <input type="submit" class="button" >
+              
+            
+        
+
+</form></div>
+
+<div class="sam">
+<h2>REMARKS</h2>
+
+<form action = "/rm/{{pk2.id}}/" method="POST">{% csrf_token %}
+<textarea rows="8" cols="100" name ="rm" >
+{{pk2.rm}}
+
+</textarea>
+<br>
+
+            <input type="submit" class="button" >
+              
+            
+          
+
+
+
+
+  
+					
+					
+</div><br></div></body></html>
